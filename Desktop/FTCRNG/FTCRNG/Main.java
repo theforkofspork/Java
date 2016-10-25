@@ -2,12 +2,9 @@
 /**
  * Write a description of class Main here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sam
+ * @version 1.6
  */
-//test
-import java.util.Random;
-import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
@@ -120,8 +117,7 @@ public class Main
            WriteToFile.addActionListener(new ActionListener() {
            public void actionPerformed(ActionEvent e){
              WriteFile(Winners); 
-             frame.setVisible(false);
-             System.exit(0);
+             WriteToFile.setVisible(false);
            }
            });
            Close.addActionListener(new ActionListener() {

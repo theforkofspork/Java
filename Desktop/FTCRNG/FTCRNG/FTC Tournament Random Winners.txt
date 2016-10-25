@@ -1,29 +1,29 @@
-Team 7 wins the Inspire Award!
+Team 19 wins the Inspire Award!
 
-Team 12 wins the second place Inspire Award!
+Team 11 wins the second place Inspire Award!
 
-Team 13 wins the third place Inspire Award!
+Team 3 wins the third place Inspire Award!
 
-Team 10 wins the Connect Award!
+Team 13 wins the Connect Award!
 
-Team 4 wins the Think Award!
+Team 6 wins the Think Award!
 
-Team 6 wins the Rockwell Collins Innovate Award!
+Team 2 wins the Rockwell Collins Innovate Award!
 
-Team 3 wins the PTC Design Award!
+Team 22 wins the PTC Design Award!
 
-Team 5 wins the Control Award!
+Team 12 wins the Control Award!
 
-Team 1 is the Winning Alliance Captain!
+Team 8 is the Winning Alliance Captain!
 
-Team 19 is the Winning Alliance first pick!
+Team 18 is the Winning Alliance first pick!
 
-Team 22 is the Winning Alliance second pick!
+Team 10 is the Winning Alliance second pick!
 
-Team 11 is the Finalist Alliance Captain!
+Team 7 is the Finalist Alliance Captain!
 
-Team 17 is the Finalist Alliance first pick!
+Team 19 is the Finalist Alliance first pick!
 
-Team 16 is the Finalist Alliance second pick!
+Team 9 is the Finalist Alliance second pick!
 
 Writing to file will create a file with this information,    appearing in the same place as where you opened this program, overwriting an existing file with the same      name and will close this window

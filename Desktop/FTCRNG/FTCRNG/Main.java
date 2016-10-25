@@ -5,13 +5,24 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
- 
+//test
 import java.util.Random;
 import java.util.Scanner;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import javax.swing.JLabel;
+import javax.swing.JSpinner;
+import javax.swing.JButton;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+import java.awt.Dimension;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.PrintWriter;
+import java.io.IOException;
 public class Main
 {
     public static void main(String[] args){
@@ -30,7 +41,7 @@ public class Main
         Panel.add(Enter);
         Panel.setBackground(Color.lightGray);
         Panel.setSize(100,100);
-        frame.setSize(500,600);
+        frame.setSize(600,600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(Panel);
         frame.getContentPane().setBackground(Color.CYAN);
@@ -91,12 +102,15 @@ public class Main
            + String.valueOf(FAPO) + " is the Finalist Alliance first pick!\n\n" + "Team " 
            + String.valueOf(FAPT) + " is the Finalist Alliance second pick!\n\nWriting to file will create a file with this information,    appearing in the same place as where you opened this program, overwriting an existing file with the same      name and will close this window");
            JButton WriteToFile = new JButton("Write to file");
+           JButton Close = new JButton("Close");
            Winners.setPreferredSize(new Dimension(350,550));
            Winners.setLineWrap(true);
            Winners.setBackground(Color.lightGray);
            WriteToFile.setPreferredSize(new Dimension(100,30));
+           Close.setPreferredSize(new Dimension(100,30));
            Panel.add(Winners);
            Panel.add(WriteToFile);
+           Panel.add(Close);
            Panel.setSize(100,100);
            spin.setVisible(false);
            Enter.setVisible(false);
@@ -110,13 +124,18 @@ public class Main
              System.exit(0);
            }
            });
+           Close.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e){ 
+             frame.setVisible(false);
+             System.exit(0);
+           }
+           });
         }
        });
     }
     private static void WriteFile(JTextArea TextArea){
         try{
             File file = new File ("FTC Tournament Random Winners.txt");
-            file.setLocation("/Users/Sam/Desktop/");
             PrintWriter printWriter = new PrintWriter ("FTC Tournament Random Winners.txt");
             printWriter.println(TextArea.getText());
             printWriter.close();

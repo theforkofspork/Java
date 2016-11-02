@@ -1,0 +1,48 @@
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.SwingUtilities;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+public class JButtonz{
+    public static void main(String[] args){
+        //Initialize constants
+        final int JFRAME_SIZE_X = 500;
+        final int JFRAME_SIZE_Y = 500;
+        final String JFRAME_TITLE = "JFrame";
+        final Color JFRAME_BACKGROUND_COLOR = Color.lightGray;
+        final int JBUTTON_SIZE_X = 250;
+        final int JBUTTON_SIZE_Y = 70;
+        final String JBUTTON_TITLE = "Hitting this button will make it go away";
+        
+        //Initialize swing components
+        JFrame frame = new JFrame(JFRAME_TITLE);
+        JPanel panel = new JPanel();
+        JButton button = new JButton(JBUTTON_TITLE);
+        
+        //Set frame attributes
+        frame.setSize( JFRAME_SIZE_X , JFRAME_SIZE_Y);
+        frame.setBackground(JFRAME_BACKGROUND_COLOR);
+        frame.setLocationRelativeTo(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        //Set button attributes
+        button.setSize( JBUTTON_SIZE_X , JBUTTON_SIZE_Y);
+        
+        //Add the swing components
+        panel.add(button);
+        frame.add(panel);
+        
+        //Show the frame
+        frame.setVisible(true);
+        
+        //Add the actionlistener for the button
+        button.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+             button.setVisible(false);
+             SwingUtilities.updateComponentTreeUI(frame);
+        }
+        });
+    }
+}

@@ -1,7 +1,9 @@
 import javax.swing.JFrame;
 import java.awt.Color;
+
 public class CreatingJFrame{
-    public static void main(String[] args){
+    public static void main(String[] args)
+    {
         //Intitialize constants
         final int JFRAME_SIZE_X = 500;
         final int JFRAME_SIZE_Y = 500;

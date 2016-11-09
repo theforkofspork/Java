@@ -1,0 +1,53 @@
+import java.awt.Color;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
+
+public class Main 
+{
+	public static void main(String[] args)
+	{
+		JFrame frame = new JFrame("Frame");
+		frame.setSize(500,500);
+		frame.setLocationRelativeTo(null);
+		frame.setBackground(Color.black);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.black);
+		panel.setLayout(new FlowLayout());
+		
+		SpinnerModel model = new SpinnerNumberModel(0,0.0,10000.0,0.1);
+		JSpinner spinner = new JSpinner(model);
+		
+		final String[] scrollbaroptions = {"Kilometers", "Meters", "Centimeters",
+											"Millimeters", "Micrometers", "Nanometers",
+											"Miles", "Yards", "Feet", "Inches"};
+		JComboBox firstCB = new JComboBox(scrollbaroptions);
+		
+		JLabel to = new JLabel("to");
+		
+		JComboBox secondCB = new JComboBox(scrollbaroptions);
+		
+		JButton enter = new JButton("Enter");
+		enter.setSize(100,30);
+		
+		panel.add(spinner);
+		panel.add(firstCB);
+		panel.add(to);
+		panel.add(secondCB);
+		panel.add(enter);
+		frame.add(panel);
+		frame.setVisible(true);
+		//frame.pack();
+		
+		
+	}
+}

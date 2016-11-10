@@ -1,6 +1,5 @@
 import java.applet.Applet;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -9,7 +8,6 @@ public class mainClass extends Applet
 {
 	int[][] tilePlacement = new int[4][4];
 	int repaintCount = 0;
-	boolean paintTiles = false;
 	
 	
 	public void paint(Graphics g)
@@ -39,60 +37,9 @@ public class mainClass extends Applet
 			g2.fill(new RoundRectangle2D.Float(255,350,80,80,20,20));
 			g2.fill(new RoundRectangle2D.Float(350,350,80,80,20,20));
 		}
-		if(paintTiles)
-		{
-			if(tilePlacement[1][1] > 0){
-				
-			}
-			if(tilePlacement[2][1] > 0){
-				
-			}
-			if(tilePlacement[3][1] > 0){
-				
-			}
-			if(tilePlacement[4][1] > 0){
-	
-			}
-			if(tilePlacement[1][2] > 0){
-	
-			}
-			if(tilePlacement[2][2] > 0){
-	
-			}
-			if(tilePlacement[3][2] > 0){
-	
-			}
-			if(tilePlacement[4][2] > 0){
-				
-			}
-			if(tilePlacement[1][3] > 0){
-				
-			}
-			if(tilePlacement[2][3] > 0){
-				
-			}
-			if(tilePlacement[3][3] > 0){
-				
-			}
-			if(tilePlacement[4][3] > 0){
-	
-			}
-			if(tilePlacement[1][4] > 0){
-	
-			}
-			if(tilePlacement[2][4] > 0){
-	
-			}
-			if(tilePlacement[3][4] > 0){
-	
-			}
-			if(tilePlacement[4][4] > 0){
-				
-			}
-
-
-		}
+		
 		
 		repaintCount++;
 	}
+	
 }

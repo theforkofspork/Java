@@ -23,6 +23,10 @@ public class mainClass extends Applet
 			g2.fill(new RoundRectangle2D.Float(185,125,60,60,20,20));
 			g2.fill(new RoundRectangle2D.Float(250,125,60,60,20,20));
 			g2.fill(new RoundRectangle2D.Float(315,125,60,60,20,20));
+			g2.fill(new RoundRectangle2D.Float(120,190,60,60,20,20));
+			g2.fill(new RoundRectangle2D.Float(185,190,60,60,20,20));
+			g2.fill(new RoundRectangle2D.Float(250,190,60,60,20,20));
+			g2.fill(new RoundRectangle2D.Float(315,190,60,60,20,20));
 		}
 		
 		

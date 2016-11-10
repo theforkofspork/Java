@@ -1,0 +1,13 @@
+import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Graphics;
+public class mainClass extends Applet 
+{
+	int[][] tilePlacement = new int[4][4];
+	public void paint(Graphics g)
+	{
+		setSize(500,500);
+		setBackground(Color.LIGHT_GRAY);
+	}
+	
+}

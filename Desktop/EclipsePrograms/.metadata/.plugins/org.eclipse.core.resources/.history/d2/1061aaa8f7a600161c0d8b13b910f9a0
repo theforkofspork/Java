@@ -1,0 +1,24 @@
+import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Graphics;
+public class mainClass extends Applet 
+{
+	int[][] tilePlacement = new int[4][4];
+	int repaintCount = 0;
+	
+	public void paint(Graphics g)
+	{
+		setSize(500,500);
+		setBackground(Color.LIGHT_GRAY.brighter());
+		
+		if(repaintCount == 1)
+		{
+			g.setColor(Color.LIGHT_GRAY.darker());
+			g.fillRect(100, 100, 100, 100);
+		}
+		
+		
+		repaintCount++;
+	}
+	
+}

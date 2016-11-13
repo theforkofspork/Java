@@ -1,4 +1,5 @@
 import java.applet.Applet;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Frame;
@@ -10,7 +11,6 @@ public class mainClass extends Applet
 	int[][] tilePlacement = new int[4][4];
 	int repaintCount = 0;
 	boolean paintTiles = false;
-	
 	
 	public void paint(Graphics g)
 	{

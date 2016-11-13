@@ -1,0 +1,31 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class NumberOperations{
+
+	public static void main(String[] args) 
+	{
+		JFrame frame = new JFrame("NumberOperations");
+		JPanel panel = new JPanel();
+		JButton singleNumber = new JButton("Single number operations");
+		JButton doubleNumber = new JButton("Two number operations");
+		
+		setFrameAttributes(frame,500,500,Color.LIGHT_GRAY);
+		
+		singleNumber.setSize(100,30);
+		doubleNumber.setSize(100,30);
+		
+		panel.add(singleNumber);
+		panel.add(doubleNumber);
+		
+		frame.add(panel);
+		
+		frame.setVisible(true);
+	}
+	private static void setFrameAttributes(JFrame frame,int sizeX,int sizeY,Color backgroundColor)
+	{
+		frame.setSize(sizeX,sizeY);
+		frame.setBackground(backgroundColor);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

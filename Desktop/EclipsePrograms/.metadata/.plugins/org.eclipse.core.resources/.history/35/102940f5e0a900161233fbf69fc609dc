@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class LoginSystem {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter your first name");
+		System.out.println("");
+		String firstName = scan.nextLine();
+		System.out.println("Enter your last name");
+		System.out.println("");
+		String lastName = scan.nextLine();
+		StringBuilder build = new StringBuilder();
+		build.append(firstName);
+		build.append(" ");
+		build.append(lastName);
+		System.out.println(build.toString());
+		
+
+	}
+
+}

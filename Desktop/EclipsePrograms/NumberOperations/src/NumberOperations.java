@@ -12,7 +12,7 @@ public class NumberOperations{
 		SpinnerModel model = new SpinnerNumberModel(0,-10000,10000,0.1);
 		JSpinner singleSpinner = new JSpinner(model);
 		String[] ssc = {"Absolute value"};
-		JComboBox singleCB = new JComboBox(singleChoices);
+		JComboBox singleCB = new JComboBox(ssc);
 		JButton singleEnter = new JButton("Enter");
 		JLabel answer = new JLabel("");	
 		answer.setFont(new Font("Aldrich", Font.PLAIN, 30));

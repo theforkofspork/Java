@@ -11,7 +11,7 @@ public class NumberOperations{
 		JButton doubleNumber = new JButton("Two number operations");
 		SpinnerModel model = new SpinnerNumberModel(0,-10000,10000,0.1);
 		JSpinner singleSpinner = new JSpinner(model);
-		String[] ssc = {"Absolute value"};
+		String[] singleChoices = {"Absolute value"};
 		JComboBox singleCB = new JComboBox(singleChoices);
 		JButton singleEnter = new JButton("Enter");
 		JLabel answer = new JLabel("");	
@@ -39,13 +39,12 @@ public class NumberOperations{
 	        	panel.add(singleEnter);
 	        	SwingUtilities.updateComponentTreeUI(frame);
 	        	frame.pack();
-	        	 String SSI = (String)singleCB.getSelectedItem();
 	        	singleEnter.addActionListener(new ActionListener() {
 	                public void actionPerformed(ActionEvent e) {
 	                	singleSpinner.setVisible(false);
 	                	singleCB.setVisible(false);
 	                	singleEnter.setVisible(false);
-	                    if(singleCB.getSelectedItem() == ssc[0]) answer.setText(String.valueOf(Math.abs((double)singleSpinner.getValue())));
+	                    if(singleCB.getSelectedItem() == singleChoices[0]) answer.setText(String.valueOf(Math.abs((double)singleSpinner.getValue())));
 	                    panel.add(answer);
 	                    SwingUtilities.updateComponentTreeUI(frame);
 	                    
@@ -67,8 +66,5 @@ public class NumberOperations{
 		frame.setSize(sizeX,sizeY);
 		frame.setBackground(backgroundColor);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
-	private static double abs(double n){
-		return Math.abs(n);
 	}
 }

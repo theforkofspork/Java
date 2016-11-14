@@ -1,0 +1,59 @@
+/*
+ * Written by Sam Wendolek
+ * 11/14/16
+ */
+
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
+
+
+public class FibonacciIndex 
+{
+
+	
+	public static void main(String[] args) 
+	{
+		JFrame frame = new JFrame("Fibonacci Sequence");
+		frame.setBackground(Color.WHITE);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		
+		JPanel panel = new JPanel();
+		
+		JLabel indexLbl = new JLabel("Index:");
+		indexLbl.setFont(new Font("Impact", Font.PLAIN, 14));
+		
+		JSpinner indexSpinner = new JSpinner(new SpinnerNumberModel(0 , 0, 999999 , 1 ));
+		indexSpinner.setSize(100,30);
+		
+		JButton enter = new JButton("Enter");
+		enter.setFont(new Font("Impact", Font.PLAIN, 14));
+		enter.setBackground(Color.yellow);
+		
+		panel.add(indexLbl);
+		panel.add(indexSpinner);
+		panel.add(enter);
+		
+		frame.add(panel);
+		frame.pack();
+		frame.setVisible(true);
+	}
+
+	
+	private static long fibo(long i)
+	{
+		if(i <= 0) return 0;
+		if(i <= 2) return 1;
+		
+		return (i - 1) + (i - 2);
+		
+	}
+	
+}

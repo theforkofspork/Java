@@ -35,13 +35,13 @@ public class FibonacciIndex
 		
 		JSpinner indexSpinner = new JSpinner(new SpinnerNumberModel(0 , 0, 999999 , 1 ));
 		indexSpinner.setSize(100,30);
-		indexSpinner.setFont(new Font("Impact", Font.PLAIN, 24));
+		indexSpinner.setFont(font);
 		
 		JButton enter = new JButton("Enter");
-		enter.setFont(new Font("Impact", Font.PLAIN, 24));
+		enter.setFont(font);
 		
 		JLabel answer = new JLabel(" ");
-		answer.setFont(new Font("Impact", Font.PLAIN, 24));
+		answer.setFont(font);
 		
 		panel.add(indexLbl);
 		panel.add(indexSpinner);

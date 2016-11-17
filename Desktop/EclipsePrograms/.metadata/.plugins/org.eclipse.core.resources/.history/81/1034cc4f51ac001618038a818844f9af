@@ -1,0 +1,51 @@
+package com.Timer;
+
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JFrame;
+
+public class Timer extends Canvas implements KeyListener{
+
+	private static final long serialVersionUID = 5786145012149474206L;
+	final int frameWidth = 500, frameHeight = frameWidth/12*9;
+	double currentTime = 0.0;
+	JFrame frame;
+
+	public Timer(){
+		new Window(frame, frameWidth, frameHeight, "Frame", this);
+		this.setFocusable(true);
+		this.addKeyListener(this);
+	}
+	
+
+	public static void main(String[] args)
+	{
+		new Timer();
+	}
+
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		frame.setVisible(false);
+		
+	}
+
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

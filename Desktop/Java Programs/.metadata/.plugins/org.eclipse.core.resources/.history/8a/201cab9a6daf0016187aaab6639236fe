@@ -1,0 +1,23 @@
+package fibonacci.Main;
+
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+
+public class Frame {
+	public static JFrame makeFrame(int height, int width, String title, Color background)
+	{
+		JFrame frame = new JFrame(title);
+		
+		frame.setSize(new Dimension(width,height));
+		frame.setMaximumSize(new Dimension(width,height));
+		frame.setMinimumSize(new Dimension(width,height));
+		frame.setResizable(false);
+		
+		frame.setBackground(background);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		return frame;
+	}
+}

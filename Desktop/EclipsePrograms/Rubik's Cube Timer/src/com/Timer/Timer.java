@@ -18,7 +18,13 @@ public class Timer extends Applet implements KeyListener{
 	private static final long serialVersionUID = -3444377993458620215L;
 	final int frameWidth = 500, frameHeight = frameWidth/12*9;
 	double currentTime = 0.0;
-	
+	public void init(){
+		setSize(500,500);
+		setBackground(Color.yellow);
+		setFocusable(true);
+		this.addKeyListener(this);
+		setVisible(true);
+	}
 	public Timer(){
 		//Window(frameWidth, frameHeight, "Frame", this);
 		
@@ -26,12 +32,6 @@ public class Timer extends Applet implements KeyListener{
 	
 	public void paint(Graphics g)
 	{
-		setSize(500,500);
-		setBackground(Color.yellow);
-		setFocusable(true);
-		this.addKeyListener(this);
-		setVisible(true);
-		
 		Graphics2D g2 = (Graphics2D)g;
 		g2.setColor(Color.black);
 		g2.drawString(genScramble(), 100,100);
@@ -50,7 +50,7 @@ public class Timer extends Applet implements KeyListener{
 	{
 		StringBuilder SB = new StringBuilder();
 		int previousFace = 0, scrambleRV = 0;
-		double markRV = 0.0;
+		float markRV = 0.0;
 		
 		for(int i = 0; i < (int)Math.random()*2+20; i++){
 			

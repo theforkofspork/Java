@@ -1,0 +1,5 @@
+package pong.main;
+
+public class Ball {
+
+}

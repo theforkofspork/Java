@@ -1,0 +1,22 @@
+package pong.main;
+
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+
+public class SetAttributes {
+
+	public void setAttributes(JFrame frame, int width, int height, String title, Color color)
+	{
+		frame.setSize(new Dimension(width, height));
+		frame.setMaximumSize(new Dimension(width, height));
+		frame.setMinimumSize(new Dimension(width, height));
+		frame.setResizable(false);
+		
+		frame.setLocationRelativeTo(null);
+		//frame.getContentPane().setBackground(color);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+}

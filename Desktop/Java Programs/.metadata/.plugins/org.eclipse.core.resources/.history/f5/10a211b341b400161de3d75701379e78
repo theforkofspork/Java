@@ -1,0 +1,29 @@
+package thing.main;
+
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+public class Main 
+{
+
+	final static int width = 640, height = width/12*9;
+	
+	public static void main(String[] args)
+	{
+		JFrame frame = new JFrame("Thing");
+		
+		frame.setSize(new Dimension(width,height));
+		frame.setMaximumSize(new Dimension(width,height));
+		frame.setMinimumSize(new Dimension(width,height));
+		frame.setResizable(false);
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		
+		//frame.add(new Thing());
+		
+		frame.setVisible(true);
+		
+	}
+	
+}

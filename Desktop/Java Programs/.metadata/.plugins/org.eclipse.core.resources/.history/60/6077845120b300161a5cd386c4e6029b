@@ -1,0 +1,5 @@
+package pong.graphics;
+
+public class DrawBall {
+
+}

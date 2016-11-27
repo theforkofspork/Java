@@ -1,0 +1,10 @@
+package thing.main;
+
+public enum ID {
+
+	PlayerOne(),
+	PlayerTwo(),
+	Player(),
+	CPU();
+	
+}

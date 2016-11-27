@@ -1,0 +1,12 @@
+package pong.main;
+
+import java.awt.Graphics;
+
+public class Ball{
+
+	public Ball(Graphics g)
+	{
+		
+	}
+
+}

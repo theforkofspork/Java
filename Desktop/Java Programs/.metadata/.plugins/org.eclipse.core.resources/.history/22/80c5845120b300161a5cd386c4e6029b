@@ -1,0 +1,12 @@
+package pong.graphics;
+
+import java.awt.Graphics;
+
+public class DrawBall {
+
+	public DrawBall(Graphics g, int x, int y, int size)
+	{
+		g.fillRect(x, y, size, size);
+	}
+	
+}

@@ -1,0 +1,7 @@
+package thing.main;
+
+public enum ID {
+
+	Player();
+	
+}

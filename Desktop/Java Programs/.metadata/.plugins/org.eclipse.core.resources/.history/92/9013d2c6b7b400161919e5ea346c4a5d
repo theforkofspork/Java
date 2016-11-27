@@ -1,0 +1,8 @@
+package thing.main;
+
+public enum ID {
+
+	PlayerOne(),
+	Ball();
+	
+}

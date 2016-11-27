@@ -1,0 +1,16 @@
+package pong.graphics;
+
+import java.awt.Graphics;
+
+public class DrawPlayerTwo {
+	
+	public int playerHeight, playerWidth;
+	
+	public DrawPlayerTwo(Graphics g, int y, int width, int height)
+	{
+		playerWidth = (width/36);
+		playerHeight = (playerWidth*5);
+		
+		g.fillRect(width - playerWidth, y, playerWidth, playerHeight);
+	}
+}

@@ -1,0 +1,96 @@
+package pong.main;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import pong.graphics.DrawCenterRects;
+import pong.graphics.DrawPlayerOne;
+import pong.graphics.DrawPlayerTwo;
+
+public class Main extends JPanel implements KeyListener
+{
+	
+	private static final long serialVersionUID = 1983098431792519977L;
+	final static int width = 640, height = width/12*9;
+	final int centerRectWidth = width/36, centerRectHeight = centerRectWidth*2;
+	final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	
+	int playerOneY = height / 2, playerTwoY = playerOneY;
+	int key;
+	
+	public void paintComponent(Graphics g)
+	{
+		super.paintComponent(g);
+		this.addKeyListener(this);
+		setFocusable(true);
+		setBackground(Color.black);
+		g.setColor(Color.white);
+		
+		new DrawCenterRects(g, width, height);
+		new DrawPlayerOne(g, playerOneY, width, height);
+		new DrawPlayerTwo(g, playerTwoY, width, height);
+	}
+	
+	
+	public static void main(String[] args)
+	{
+		Main m = new Main();
+		SetAttributes a = new SetAttributes();
+		JFrame frame = new JFrame("Frame");
+		
+		a.setAttributes(frame, width, height, "Frame", m);
+		frame.setVisible(true);
+	}
+
+	public void keyTyped(KeyEvent e) {}
+
+	public void keyPressed(KeyEvent e) {
+		
+		while(playerOneY > height)
+		{
+			playerOneY -= 5;
+			repaint();
+		}
+		while(playerTwoY > height)
+		{
+			playerTwoY -= 5;
+			repaint();
+		}
+		
+		key = e.getKeyCode();
+		
+		if(key == KeyEvent.VK_UP)
+		{
+			playerTwoY -= 1;
+			repaint();
+		}
+		if(key == KeyEvent.VK_DOWN)
+		{
+			playerTwoY += 1;
+			repaint();
+		}
+		if(key == KeyEvent.VK_W)
+		{
+			playerOneY -= 1;
+			repaint();
+		}
+		if(key == KeyEvent.VK_S)
+		{
+			playerOneY += 1;
+			repaint();
+		}
+		
+		
+	}
+
+	public void keyReleased(KeyEvent e) {}
+	
+}

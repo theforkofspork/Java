@@ -7,7 +7,6 @@ public class KeyInput extends KeyAdapter
 {
 
 	private Handler handler;
-	private boolean gameStarted = false;
 	
 	public KeyInput(Handler handler)
 	{
@@ -32,14 +31,7 @@ public class KeyInput extends KeyAdapter
 			}
 			if(tempObject.getID() == ID.Ball)
 			{
-				if(key == KeyEvent.VK_1){
-					gameStarted = true;
-					//1 player
-				}
-				
-				if(key == KeyEvent.VK_2 && !gameStarted)
-				{
-					gameStarted = true;
+				if(key == KeyEvent.VK_SPACE){
 					if(Math.random() >= 0.5) tempObject.setVelX((int) Math.random()*2+1);
 					else tempObject.setVelX((int) Math.random()*2+1);
 					tempObject.setVelY(1);

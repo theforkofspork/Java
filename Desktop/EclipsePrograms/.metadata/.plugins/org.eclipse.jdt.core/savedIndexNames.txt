@@ -1,2 +1,0 @@
-INDEX VERSION 1.129+/Users/Sam/Desktop/EclipsePrograms/.metadata/.plugins/org.eclipse.jdt.core
-43544299.index

@@ -1,7 +1,0 @@
-package com.Timer;
-
-import java.awt.Canvas;
-
-public class Timer extends Canvas{
-
-}
